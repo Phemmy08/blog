@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>C&S Ministers Biography</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>C&S Ministers</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html" class="active">Home</a>
+                <a href="about.html">About</a>
+                <a href="ministers.html">All Ministers</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="hero-content">
+                <h2>Cherubim & Seraphim Ministers</h2>
+                <p class="subtitle">Preserving the Legacy of Faith and Service</p>
+                <a href="#featured" class="cta-button">Meet Our Ministers</a>
+            </div>
+        </section>
+
+        <section class="intro">
+            <div class="container">
+                <h2>Our Mission</h2>
+                <p>Welcome to the Cherubim & Seraphim Ministers Biography project. Our mission is to preserve and share the inspiring stories of dedicated ministers who have served in the C&S Church. Through these biographies, we honor their contributions, celebrate their achievements, and inspire future generations of ministers.</p>
+            </div>
+        </section>
+
+        <section id="featured" class="featured-ministers">
+            <div class="container">
+                <h2>Featured Ministers</h2>
+                <div class="filter-buttons">
+                    <button onclick="filterMinisters('all')" class="active">All</button>
+                    <button onclick="filterMinisters('apostle')">Apostles</button>
+                    <button onclick="filterMinisters('prophet')">Prophets</button>
+                    <button onclick="filterMinisters('evangelist')">Evangelists</button>
+                </div>
+                <div class="ministers-grid">
+                    <!-- Minister Card 1 -->
+                    <article class="minister-card" data-title="apostle">
+                        <div class="minister-image">
+                            <img src="images/pst-sam-makanju.jpg" alt="Apostle John Doe">
+                        </div>
+                        <div class="minister-info">
+                            <h3>Pastor Sam Makanju</h3>
+                            <p class="title">Pastor</p>
+                            <p class="excerpt">Pastor Sam has been serving as the Senior Pastor at Dayspring Seraphic Church for over 4 years. Under his guidance, the church has expanded its outreach programs and established a strong community presence.</p>
+                            <a href="ministers/apostle-john-doe.html" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Minister Card 2 -->
+                    <article class="minister-card" data-title="prophet">
+                        <div class="minister-image">
+                            <img src="images/placeholder.jpg" alt="Prophet Jane Smith">
+                        </div>
+                        <div class="minister-info">
+                            <h3>Prophet Jane Smith</h3>
+                            <p class="title">Prophet</p>
+                            <p class="excerpt">Known for her prophetic ministry and dedication to youth development, inspiring generations through spiritual guidance.</p>
+                            <a href="ministers/prophet-jane-smith.html" class="read-more">Read More</a>
+                        </div>
+                    </article>
+
+                    <!-- Minister Card 3 -->
+                    <article class="minister-card" data-title="evangelist">
+                        <div class="minister-image">
+                            <img src="images/placeholder.jpg" alt="Evangelist Michael Brown">
+                        </div>
+                        <div class="minister-info">
+                            <h3>Evangelist Michael Brown</h3>
+                            <p class="title">Evangelist</p>
+                            <p class="excerpt">A passionate evangelist spreading the gospel through music and powerful preaching across multiple continents.</p>
+                            <a href="ministers/evangelist-michael-brown.html" class="read-more">Read More</a>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+        <section class="scripture-quote">
+            <div class="container">
+                <blockquote>
+                    <p>"Not unto us, O Lord, not unto us, but unto thy name give glory, for thy mercy, and for thy truth's sake."</p>
+                    <cite>Psalm 115:1</cite>
+                </blockquote>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="ministers.html">All Ministers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Email: info@csministers.org</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 C&S Ministers Biography. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

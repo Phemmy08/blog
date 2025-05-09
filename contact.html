@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact | C&S Ministers Biography</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .contact-section {
+            padding: 4rem 0;
+            min-height: calc(100vh - 300px);
+        }
+
+        .contact-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 4rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .contact-info {
+            background-color: var(--cream-color);
+            padding: 2rem;
+            border-radius: 10px;
+        }
+
+        .contact-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .contact-details {
+            margin-bottom: 2rem;
+        }
+
+        .contact-details p {
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+        }
+
+        .contact-details i {
+            color: var(--primary-color);
+            font-size: 1.2rem;
+        }
+
+        .contact-form {
+            background-color: var(--background-color);
+            padding: 2rem;
+            border-radius: 10px;
+            box-shadow: var(--card-shadow);
+        }
+
+        .form-group {
+            margin-bottom: 1.5rem;
+        }
+
+        .form-group label {
+            display: block;
+            margin-bottom: 0.5rem;
+            color: var(--primary-color);
+        }
+
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 0.8rem;
+            border: 1px solid #ddd;
+            border-radius: 5px;
+            font-family: inherit;
+        }
+
+        .form-group textarea {
+            height: 150px;
+            resize: vertical;
+        }
+
+        .submit-btn {
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-weight: bold;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-btn:hover {
+            background-color: var(--secondary-color);
+        }
+
+        .map-container {
+            margin-top: 2rem;
+            border-radius: 10px;
+            overflow: hidden;
+            height: 300px;
+            background-color: #f0f0f0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .map-placeholder {
+            text-align: center;
+            color: var(--text-color);
+        }
+
+        @media (max-width: 768px) {
+            .contact-grid {
+                grid-template-columns: 1fr;
+                gap: 2rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>C&S Ministers</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="ministers.html">All Ministers</a>
+                <a href="contact.html" class="active">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 30vh; min-height: 200px;">
+            <div class="hero-content">
+                <h2>Contact Us</h2>
+                <p class="subtitle">Get in touch with the C&S Ministers Biography project</p>
+            </div>
+        </section>
+
+        <section class="contact-section">
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Contact Information</h3>
+                    <div class="contact-details">
+                        <p>
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>123 Church Street, Lagos, Nigeria</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-phone"></i>
+                            <span>+234 123 456 7890</span>
+                        </p>
+                        <p>
+                            <i class="fas fa-envelope"></i>
+                            <span>info@csministers.org</span>
+                        </p>
+                    </div>
+                    <div class="map-container">
+                        <div class="map-placeholder">
+                            <i class="fas fa-map-marked-alt fa-3x"></i>
+                            <p>Map placeholder - Add your map embed code here</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form">
+                    <h3>Send us a Message</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="name">Full Name</label>
+                            <input type="text" id="name" name="name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" name="email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" name="subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" name="message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="ministers.html">All Ministers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Email: info@csministers.org</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 C&S Ministers Biography. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+</body>
+</html> 

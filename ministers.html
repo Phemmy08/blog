@@ -1,0 +1,336 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>All Ministers | C&S Ministers Biography</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <style>
+        .ministers-section {
+            padding: 4rem 0;
+            min-height: calc(100vh - 300px);
+        }
+
+        .filter-section {
+            background-color: var(--cream-color);
+            padding: 2rem 0;
+            margin-bottom: 2rem;
+        }
+
+        .filter-container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .filter-options {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 1rem;
+            justify-content: center;
+        }
+
+        .filter-btn {
+            padding: 0.5rem 1.5rem;
+            border: 2px solid var(--primary-color);
+            background: none;
+            color: var(--primary-color);
+            border-radius: 25px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 500;
+        }
+
+        .filter-btn.active,
+        .filter-btn:hover {
+            background-color: var(--primary-color);
+            color: var(--background-color);
+        }
+
+        .search-box {
+            max-width: 500px;
+            margin: 1rem auto;
+            position: relative;
+        }
+
+        .search-box input {
+            width: 100%;
+            padding: 0.8rem 1rem;
+            padding-left: 3rem;
+            border: 1px solid #ddd;
+            border-radius: 25px;
+            font-size: 1rem;
+        }
+
+        .search-box i {
+            position: absolute;
+            left: 1rem;
+            top: 50%;
+            transform: translateY(-50%);
+            color: var(--primary-color);
+        }
+
+        .ministers-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 2rem;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        .minister-card {
+            background-color: var(--background-color);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: transform 0.3s ease;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .minister-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .minister-image {
+            width: 100%;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .minister-image img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .minister-info {
+            padding: 1.5rem;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .minister-info h3 {
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .minister-info .title {
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .minister-info .church {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            margin-bottom: 1rem;
+        }
+
+        .read-more {
+            margin-top: auto;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            background-color: var(--primary-color);
+            color: var(--background-color);
+            text-decoration: none;
+            border-radius: 5px;
+            transition: background-color 0.3s ease;
+            text-align: center;
+        }
+
+        .read-more:hover {
+            background-color: var(--secondary-color);
+        }
+
+        @media (max-width: 768px) {
+            .filter-options {
+                flex-direction: column;
+                align-items: stretch;
+            }
+
+            .filter-btn {
+                width: 100%;
+            }
+
+            .ministers-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <h1>C&S Ministers</h1>
+            </div>
+            <div class="nav-links">
+                <a href="index.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="ministers.html" class="active">All Ministers</a>
+                <a href="contact.html">Contact</a>
+            </div>
+            <div class="hamburger">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero" style="height: 30vh; min-height: 200px;">
+            <div class="hero-content">
+                <h2>All Ministers</h2>
+                <p class="subtitle">Discover the stories of our dedicated ministers</p>
+            </div>
+        </section>
+
+        <section class="filter-section">
+            <div class="filter-container">
+                <div class="filter-options">
+                    <button class="filter-btn active" data-filter="all">All Ministers</button>
+                    <button class="filter-btn" data-filter="apostle">Apostles</button>
+                    <button class="filter-btn" data-filter="prophet">Prophets</button>
+                    <button class="filter-btn" data-filter="evangelist">Evangelists</button>
+                    <button class="filter-btn" data-filter="pastor">Pastors</button>
+                </div>
+                <div class="search-box">
+                    <i class="fas fa-search"></i>
+                    <input type="text" placeholder="Search ministers..." id="searchInput">
+                </div>
+            </div>
+        </section>
+
+        <section class="ministers-section">
+            <div class="ministers-grid">
+                <!-- Minister Card 1 -->
+                <article class="minister-card" data-title="apostle">
+                    <div class="minister-image">
+                        <img src="images/pst-sam-makanju.jpg" alt="Apostle John Doe">
+                    </div>
+                    <div class="minister-info">
+                        <h3>Pastor Sam Makanju</h3>
+                        <p class="title">Pastor</p>
+                        <p class="church">Dayspring Seraphic Church, Akure</p>
+                        <a href="ministers/apostle-john-doe.html" class="read-more">Read Biography</a>
+                    </div>
+                </article>
+
+                <!-- Minister Card 2 -->
+                <article class="minister-card" data-title="prophet">
+                    <div class="minister-image">
+                        <img src="images/placeholder.jpg" alt="Prophet Jane Smith">
+                    </div>
+                    <div class="minister-info">
+                        <h3>Prophet Jane Smith</h3>
+                        <p class="title">Prophet</p>
+                        <p class="church">C&S Church of Peace, Abuja</p>
+                        <a href="ministers/prophet-jane-smith.html" class="read-more">Read Biography</a>
+                    </div>
+                </article>
+
+                <!-- Minister Card 3 -->
+                <article class="minister-card" data-title="evangelist">
+                    <div class="minister-image">
+                        <img src="images/placeholder.jpg" alt="Evangelist Michael Brown">
+                    </div>
+                    <div class="minister-info">
+                        <h3>Evangelist Michael Brown</h3>
+                        <p class="title">Evangelist</p>
+                        <p class="church">C&S Church of Grace, Port Harcourt</p>
+                        <a href="ministers/evangelist-michael-brown.html" class="read-more">Read Biography</a>
+                    </div>
+                </article>
+
+                <!-- Add more minister cards as needed -->
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>Quick Links</h3>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="ministers.html">All Ministers</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Connect With Us</h3>
+                <div class="social-icons">
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                    <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+            <div class="footer-section">
+                <h3>Contact Information</h3>
+                <p>Email: info@csministers.org</p>
+                <p>Phone: (123) 456-7890</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 C&S Ministers Biography. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="js/script.js"></script>
+    <script>
+        // Enhanced filtering functionality
+        document.addEventListener('DOMContentLoaded', function() {
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const searchInput = document.getElementById('searchInput');
+            const ministerCards = document.querySelectorAll('.minister-card');
+
+            // Filter by category
+            filterButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                    const filter = this.getAttribute('data-filter');
+                    
+                    // Update active button
+                    filterButtons.forEach(btn => btn.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Filter cards
+                    ministerCards.forEach(card => {
+                        const title = card.getAttribute('data-title');
+                        if (filter === 'all' || title === filter) {
+                            card.style.display = 'flex';
+                        } else {
+                            card.style.display = 'none';
+                        }
+                    });
+                });
+            });
+
+            // Search functionality
+            searchInput.addEventListener('input', function() {
+                const searchTerm = this.value.toLowerCase();
+                
+                ministerCards.forEach(card => {
+                    const name = card.querySelector('h3').textContent.toLowerCase();
+                    const title = card.querySelector('.title').textContent.toLowerCase();
+                    const church = card.querySelector('.church').textContent.toLowerCase();
+                    
+                    if (name.includes(searchTerm) || title.includes(searchTerm) || church.includes(searchTerm)) {
+                        card.style.display = 'flex';
+                    } else {
+                        card.style.display = 'none';
+                    }
+                });
+            });
+        });
+    </script>
+</body>
+</html> 
