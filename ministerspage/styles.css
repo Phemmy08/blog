@@ -1,0 +1,619 @@
+/* ═══════════════════════════════════════════════
+   ministers.css — FULLY STANDALONE
+   All base, navbar, footer + ministers-page styles
+   in one single file. No other CSS needed.
+   ═══════════════════════════════════════════════ */
+
+/* ── Variables ── */
+:root {
+    --navy:        #0d1f3c;
+    --navy-mid:    #1a3560;
+    --gold:        #c9a84c;
+    --gold-light:  #e8c97e;
+    --gold-pale:   #fdf6e3;
+    --white:       #ffffff;
+    --off-white:   #f8f7f4;
+    --text:        #2c2c2c;
+    --text-muted:  #6b6b6b;
+    --border:      rgba(201, 168, 76, 0.25);
+
+    --font-display: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    --font-body:    'Lato', system-ui, sans-serif;
+
+    --radius-sm:   6px;
+    --radius-md:   14px;
+    --radius-lg:   24px;
+    --shadow-card: 0 4px 24px rgba(13, 31, 60, 0.10);
+    --shadow-lift: 0 12px 40px rgba(13, 31, 60, 0.18);
+    --transition:  0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ── Reset ── */
+*, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+    font-family: var(--font-body);
+    color: var(--text);
+    background: var(--white);
+    line-height: 1.65;
+    overflow-x: hidden;
+}
+img { display: block; max-width: 100%; }
+
+/* ══════════════════════════════════════════════
+   NAVBAR
+══════════════════════════════════════════════ */
+header {
+    position: fixed;
+    top: 0; left: 0; right: 0;
+    z-index: 1000;
+}
+
+.navbar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1.1rem 2.5rem;
+    background: rgba(13, 31, 60, 0.97);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid var(--border);
+    transition: padding var(--transition), background var(--transition);
+}
+
+.navbar.scrolled {
+    padding: 0.75rem 2.5rem;
+    background: rgba(13, 31, 60, 1);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-decoration: none;
+}
+
+.logo h1 {
+    font-family: var(--font-display);
+    font-size: 1.4rem;
+    font-weight: 700;
+    color: var(--white);
+    letter-spacing: 0.02em;
+}
+
+.logo h1 .amp,
+.amp { color: var(--gold); }
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+}
+
+.nav-links a {
+    color: rgba(255,255,255,0.8);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 400;
+    padding: 0.5rem 1rem;
+    border-radius: var(--radius-sm);
+    letter-spacing: 0.03em;
+    transition: color var(--transition), background var(--transition);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--gold);
+    background: rgba(201, 168, 76, 0.1);
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+    cursor: pointer;
+    padding: 4px;
+    background: none;
+    border: none;
+}
+
+.hamburger span {
+    display: block;
+    width: 26px;
+    height: 2px;
+    background: var(--white);
+    border-radius: 2px;
+    transition: var(--transition);
+}
+
+.hamburger.active span:nth-child(1) { transform: translateY(7px) rotate(45deg); }
+.hamburger.active span:nth-child(2) { opacity: 0; }
+.hamburger.active span:nth-child(3) { transform: translateY(-7px) rotate(-45deg); }
+
+/* ══════════════════════════════════════════════
+   PAGE HERO
+══════════════════════════════════════════════ */
+.hero {
+    position: relative;
+    height: 38vh;
+    min-height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    margin-top: 64px;
+    background: var(--navy);
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        linear-gradient(135deg, rgba(13,31,60,0.93) 40%, rgba(26,53,96,0.82)),
+        url('../images/1.png') center/cover no-repeat;
+}
+
+/* Animated gold lines */
+.hero::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background:
+        repeating-linear-gradient(
+            90deg,
+            transparent,
+            transparent 120px,
+            rgba(201,168,76,0.03) 120px,
+            rgba(201,168,76,0.03) 121px
+        );
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    padding: 2rem;
+}
+
+.hero-content h2 {
+    font-family: var(--font-display);
+    font-size: clamp(2.2rem, 5vw, 4rem);
+    font-weight: 700;
+    color: var(--white);
+    line-height: 1.1;
+    margin-bottom: 0.75rem;
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.2s;
+}
+
+.hero-content .subtitle {
+    font-size: clamp(0.9rem, 2vw, 1.1rem);
+    color: rgba(255,255,255,0.6);
+    opacity: 0;
+    animation: fadeUp 0.7s ease forwards 0.4s;
+}
+
+/* Decorative gold tag line above heading */
+.hero-content::before {
+    content: '— Our Ministers —';
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    letter-spacing: 0.2em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.85rem;
+    opacity: 0;
+    animation: fadeUp 0.6s ease forwards 0.05s;
+}
+
+/* ══════════════════════════════════════════════
+   FILTER SECTION
+══════════════════════════════════════════════ */
+.filter-section {
+    background: var(--off-white);
+    border-bottom: 1px solid rgba(0,0,0,0.06);
+    padding: 1.5rem 0;
+    position: sticky;
+    top: 64px;
+    z-index: 900;
+    backdrop-filter: blur(8px);
+}
+
+.filter-container {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    flex-wrap: wrap;
+}
+
+/* Filter pill buttons */
+.filter-options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.filter-btn {
+    padding: 0.5rem 1.2rem;
+    border: 1.5px solid rgba(13,31,60,0.18);
+    background: transparent;
+    color: var(--text-muted);
+    border-radius: 50px;
+    font-size: 0.82rem;
+    font-weight: 600;
+    font-family: var(--font-body);
+    cursor: pointer;
+    letter-spacing: 0.03em;
+    transition: all var(--transition);
+}
+
+.filter-btn:hover {
+    border-color: var(--navy);
+    color: var(--navy);
+    background: rgba(13,31,60,0.05);
+}
+
+.filter-btn.active {
+    background: var(--navy);
+    border-color: var(--navy);
+    color: var(--white);
+}
+
+/* Search box */
+.search-box {
+    position: relative;
+    flex-shrink: 0;
+}
+
+.search-box i {
+    position: absolute;
+    left: 0.9rem;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    pointer-events: none;
+}
+
+.search-box input {
+    padding: 0.6rem 1rem 0.6rem 2.4rem;
+    border: 1.5px solid rgba(13,31,60,0.15);
+    border-radius: 50px;
+    font-size: 0.85rem;
+    font-family: var(--font-body);
+    color: var(--text);
+    background: var(--white);
+    outline: none;
+    width: 260px;
+    transition: border-color var(--transition), box-shadow var(--transition);
+}
+
+.search-box input:focus {
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(201,168,76,0.15);
+}
+
+.search-box input::placeholder { color: rgba(0,0,0,0.35); }
+
+/* ══════════════════════════════════════════════
+   MINISTERS SECTION & GRID
+══════════════════════════════════════════════ */
+.ministers-section {
+    padding: 4rem 0 6rem;
+    min-height: 60vh;
+}
+
+.ministers-grid {
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 2rem;
+    position: relative;
+}
+
+/* ── Minister Card ── */
+.minister-card {
+    background: var(--white);
+    border-radius: var(--radius-md);
+    overflow: hidden;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(0,0,0,0.05);
+    transition: transform var(--transition), box-shadow var(--transition), opacity var(--transition);
+    opacity: 0;
+    transform: translateY(20px);
+}
+
+/* Cards animate in via JS adding .visible */
+.minister-card.visible {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.minister-card:hover {
+    transform: translateY(-6px);
+    box-shadow: var(--shadow-lift);
+}
+
+/* Hidden state for filter */
+.minister-card.hidden {
+    display: none;
+}
+
+/* Image */
+.minister-image {
+    width: 100%;
+    height: 260px;
+    overflow: hidden;
+    position: relative;
+}
+
+.minister-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.55s ease;
+}
+
+.minister-card:hover .minister-image img {
+    transform: scale(1.06);
+}
+
+.minister-image-overlay {
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(to top, rgba(13,31,60,0.65) 0%, transparent 55%);
+    pointer-events: none;
+}
+
+/* Info */
+.minister-info {
+    padding: 1.4rem 1.6rem 1.7rem;
+}
+
+.minister-info h3 {
+    font-family: var(--font-display);
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: var(--navy);
+    margin-bottom: 0.3rem;
+    line-height: 1.2;
+}
+
+.minister-info .title {
+    font-size: 0.72rem;
+    font-weight: 700;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 0.65rem;
+}
+
+.minister-info .church {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.45rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    margin-bottom: 1.2rem;
+    line-height: 1.5;
+}
+
+.minister-info .church i {
+    color: var(--gold);
+    font-size: 0.75rem;
+    margin-top: 0.2rem;
+    flex-shrink: 0;
+}
+
+.read-more {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    color: var(--navy);
+    font-weight: 700;
+    font-size: 0.83rem;
+    text-decoration: none;
+    letter-spacing: 0.03em;
+    border-bottom: 1.5px solid transparent;
+    padding-bottom: 1px;
+    transition: color var(--transition), gap var(--transition), border-color var(--transition);
+}
+
+.read-more:hover {
+    color: var(--gold);
+    gap: 0.65rem;
+    border-color: var(--gold);
+}
+
+/* ── No Results ── */
+.no-results {
+    display: none;
+    grid-column: 1 / -1;
+    text-align: center;
+    padding: 5rem 2rem;
+    color: var(--text-muted);
+}
+
+.no-results.visible {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.no-results i {
+    font-size: 2.5rem;
+    color: rgba(0,0,0,0.15);
+}
+
+.no-results p {
+    font-size: 1rem;
+}
+
+/* Results count badge */
+.results-count {
+    max-width: 1180px;
+    margin: 0 auto 1.5rem;
+    padding: 0 2rem;
+    font-size: 0.82rem;
+    color: var(--text-muted);
+    font-weight: 500;
+}
+
+.results-count span {
+    color: var(--navy);
+    font-weight: 700;
+}
+
+/* ══════════════════════════════════════════════
+   FOOTER
+══════════════════════════════════════════════ */
+footer {
+    background: #070e1c;
+    color: rgba(255,255,255,0.75);
+}
+
+.footer-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2.5rem;
+    max-width: 1180px;
+    margin: 0 auto;
+    padding: 4rem 2rem 3rem;
+    border-bottom: 1px solid rgba(255,255,255,0.07);
+}
+
+.footer-section h3 {
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--gold);
+    margin-bottom: 1.25rem;
+}
+
+.footer-section ul { list-style: none; }
+.footer-section ul li { margin-bottom: 0.6rem; }
+
+.footer-section ul a,
+.footer-section a {
+    color: rgba(255,255,255,0.55);
+    text-decoration: none;
+    font-size: 0.9rem;
+    transition: color var(--transition);
+}
+
+.footer-section ul a:hover,
+.footer-section a:hover { color: var(--white); }
+
+.footer-section p {
+    font-size: 0.9rem;
+    color: rgba(255,255,255,0.55);
+    margin-bottom: 0.6rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.footer-section p i { color: var(--gold); }
+
+.social-icons { display: flex; gap: 0.75rem; }
+
+.social-icons a {
+    width: 36px; height: 36px;
+    display: grid; place-items: center;
+    background: rgba(255,255,255,0.07);
+    border: 1px solid rgba(255,255,255,0.12);
+    border-radius: 8px;
+    color: rgba(255,255,255,0.6) !important;
+    font-size: 0.85rem;
+    text-decoration: none;
+    transition: background var(--transition), color var(--transition), border-color var(--transition);
+}
+
+.social-icons a:hover {
+    background: var(--gold) !important;
+    border-color: var(--gold) !important;
+    color: var(--navy) !important;
+}
+
+.footer-bottom {
+    text-align: center;
+    padding: 1.5rem 2rem;
+    font-size: 0.8rem;
+    color: rgba(255,255,255,0.3);
+}
+
+/* ══════════════════════════════════════════════
+   ANIMATIONS
+══════════════════════════════════════════════ */
+@keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+}
+
+/* ══════════════════════════════════════════════
+   RESPONSIVE
+══════════════════════════════════════════════ */
+@media (max-width: 900px) {
+    .filter-container {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1rem;
+    }
+
+    .search-box input { width: 100%; }
+    .search-box { width: 100%; }
+
+    .hero { margin-top: 56px; }
+}
+
+@media (max-width: 768px) {
+    .navbar { padding: 1rem 1.25rem; }
+
+    .nav-links {
+        position: fixed;
+        top: 0; right: -100%;
+        width: 75vw; max-width: 320px;
+        height: 100vh;
+        background: var(--navy);
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 0.5rem;
+        transition: right 0.4s cubic-bezier(0.4,0,0.2,1);
+        border-left: 1px solid var(--border);
+        padding: 2rem;
+        z-index: 999;
+    }
+
+    .nav-links.active { right: 0; }
+
+    .nav-links a {
+        font-size: 1.1rem;
+        padding: 0.75rem 1.5rem;
+        width: 100%;
+        text-align: center;
+    }
+
+    .hamburger { display: flex; }
+
+    .filter-section { top: 56px; }
+
+    .ministers-grid { grid-template-columns: 1fr; }
+
+    .footer-content { grid-template-columns: 1fr; gap: 2rem; }
+}
+
+@media (max-width: 480px) {
+    .filter-options { gap: 0.4rem; }
+    .filter-btn { padding: 0.45rem 0.9rem; font-size: 0.78rem; }
+    .ministers-section { padding: 2.5rem 0 4rem; }
+}

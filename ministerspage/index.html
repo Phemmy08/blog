@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>All Ministers | C&S Ministers Biography</title>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Lato:wght@300;400;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+
+  <!-- ONE CSS FILE -->
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <!-- ══════════════════ HEADER ══════════════════ -->
+  <header>
+    <nav class="navbar">
+      <div class="logo">
+        <h1>C<span class="amp">&amp;</span>S Ministers</h1>
+      </div>
+      <div class="nav-links">
+        <a href="../">Home</a>
+        <a href="../about.html">About</a>
+        <a href="ministers.html" class="active">All Ministers</a>
+        <!-- <a href="../contact.html">Contact</a> -->
+      </div>
+      <button class="hamburger" aria-label="Toggle menu" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </nav>
+  </header>
+
+  <!-- ══════════════════ MAIN ══════════════════ -->
+  <main>
+
+    <!-- Hero -->
+    <section class="hero" aria-label="Page hero">
+      <div class="hero-content">
+        <h2>All Ministers</h2>
+        <p class="subtitle">Discover the stories of our dedicated ministers</p>
+      </div>
+    </section>
+
+    <!-- Filters -->
+    <section class="filter-section" aria-label="Filter and search">
+      <div class="filter-container">
+        <div class="filter-options" role="group" aria-label="Filter by title">
+          <button class="filter-btn active" data-filter="all">All Ministers</button>
+          <button class="filter-btn" data-filter="apostle">Apostles</button>
+          <button class="filter-btn" data-filter="prophet">Prophets</button>
+          <button class="filter-btn" data-filter="evangelist">Evangelists</button>
+          <button class="filter-btn" data-filter="pastor">Pastors</button>
+        </div>
+        <div class="search-box">
+          <i class="fas fa-search" aria-hidden="true"></i>
+          <input
+            type="search"
+            id="searchInput"
+            placeholder="Search by name, title or church…"
+            aria-label="Search ministers"
+            autocomplete="off"
+          />
+        </div>
+      </div>
+    </section>
+
+    <!-- Ministers Grid -->
+    <section class="ministers-section" aria-label="Ministers listing">
+      <div class="ministers-grid">
+
+        <!-- Pastor Sam Makanju -->
+        <article class="minister-card" data-title="pastor">
+          <div class="minister-image">
+            <img src="../images/pst-sam-makanju.jpg" alt="Pastor Sam Makanju" loading="lazy" />
+            <div class="minister-image-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="minister-info">
+            <p class="title">Pastor</p>
+            <h3>Pastor Sam Makanju</h3>
+            <p class="church">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              Dayspring Seraphic Church, Akure
+            </p>
+            <a href="../ministers/pastorsam/" class="read-more">
+              Read Biography <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Prophet Abraham Adebayo -->
+        <article class="minister-card" data-title="prophet">
+          <div class="minister-image">
+            <img src="../images/9.jpg" alt="Prophet Abraham Adebayo" loading="lazy" />
+            <div class="minister-image-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="minister-info">
+            <p class="title">Prophet</p>
+            <h3>Prophet Abraham Adebayo</h3>
+            <p class="church">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              C&amp;S Church, Grace for All Men International Ministry, Lagos
+            </p>
+            <a href="../ministers/pastor-abraham/" class="read-more">
+              Read Biography <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Prophet Cherub Obadare -->
+        <article class="minister-card" data-title="prophet">
+          <div class="minister-image">
+            <img src="../images/11 - Copy.jpg" alt="Prophet Cherub Obadare" loading="lazy" />
+            <div class="minister-image-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="minister-info">
+            <p class="title">Prophet</p>
+            <h3>Prophet Cherub Obadare</h3>
+            <p class="church">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              Spirit Life C&amp;S Church, Ibadan.
+            </p>
+            <a href="../ministers/propeth-cherub/" class="read-more">
+              Read Biography <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Pastor Segun Michael -->
+        <article class="minister-card" data-title="pastor">
+          <div class="minister-image">
+            <img src="../images/10.jpg" alt="Pastor Segun Michael" loading="lazy" />
+            <div class="minister-image-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="minister-info">
+            <p class="title">Pastor</p>
+            <h3>Pastor Segun Michael</h3>
+            <p class="church">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              Word of Life Reconciliation Outreach
+            </p>
+            <a href="../ministers/pastor-segun/" class="read-more">
+              Read Biography <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+
+        <!-- Pastor Karounwi Damilola -->
+        <article class="minister-card" data-title="pastor">
+          <div class="minister-image">
+            <img src="../images/12.jpg" alt="Pastor Karounwi Damilola" loading="lazy" />
+            <div class="minister-image-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="minister-info">
+            <p class="title">Pastor</p>
+            <h3>Pastor Karounwi Damilola</h3>
+            <p class="church">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+              Word of Life Reconciliation Outreach
+            </p>
+            <a href="../ministers/pastor-karonwi/" class="read-more">
+              Read Biography <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- Pastor Sola Ajewole -->
+        <article class="minister-card" data-title="pastor">
+          <div class="minister-image">
+            <img src="../images/14.jpg" alt="Pastor Sola Ajewole" loading="lazy" />
+            <div class="minister-image-overlay" aria-hidden="true"></div>
+          </div>
+          <div class="minister-info">
+            <p class="title">Pastor</p>
+            <h3>Pastor Sola Ajewole</h3>
+            <p class="church">
+              <i class="fas fa-map-marker-alt" aria-hidden="true"></i>
+             The Revival Centre, C&S Movement Church
+            </p>
+            <a href="../ministers/pastor-sola/" class="read-more">
+              Read Biography <i class="fas fa-arrow-right" aria-hidden="true"></i>
+            </a>
+          </div>
+        </article>
+
+        <!-- No Results Fallback -->
+        <div class="no-results" id="noResults" role="status" aria-live="polite">
+          <i class="fas fa-search-minus" aria-hidden="true"></i>
+          <p>No ministers found. Try adjusting your search or filter.</p>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ══════════════════ FOOTER ══════════════════ -->
+  <footer>
+    <div class="footer-content">
+      <div class="footer-section">
+        <h3>Quick Links</h3>
+        <ul>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="../about.html">About</a></li>
+          <li><a href="ministers.html">All Ministers</a></li>
+          <!-- <li><a href="../contact.html">Contact</a></li> -->
+        </ul>
+      </div>
+      <div class="footer-section">
+        <h3>Connect With Us</h3>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fab fa-facebook" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fab fa-instagram" aria-hidden="true"></i></a>
+          <a href="#" aria-label="YouTube"><i class="fab fa-youtube" aria-hidden="true"></i></a>
+        </div>
+      </div>
+      <div class="footer-section">
+        <h3>Contact Information</h3>
+        <p><i class="fas fa-envelope"></i> csministers@gmail.com</p>
+        <p><i class="fas fa-phone"></i> +2348109972243</p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2024 C&amp;S Ministers Biography. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <!-- ONE JS FILE -->
+  <script src="script.js"></script>
+
+</body>
+</html>

@@ -5,22 +5,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>About | C&S Ministers Biography</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/about.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ═══ NAVBAR ═══ -->
     <header>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <div class="logo">
-                <h1>C&S Ministers</h1>
+                <span class="logo-icon">✦</span>
+                <h1>C<span class="amp">&amp;</span>S Ministers</h1>
             </div>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
                 <a href="index.html">Home</a>
                 <a href="about.html" class="active">About</a>
-                <a href="ministers.html">All Ministers</a>
-                <a href="contact.html">Contact</a>
+                <a href="ministerspage/">All Ministers</a>
+                <!-- <a href="contact.html">Contact</a> -->
             </div>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -29,52 +33,186 @@
     </header>
 
     <main>
-        <section class="hero" style="height: 40vh; min-height: 250px;">
-            <div class="hero-content">
-                <h2>About This Project</h2>
-                <p class="subtitle">Honoring the Legacy of Cherubim & Seraphim Ministers</p>
+
+        <!-- ═══ PAGE HERO ═══ -->
+        <section class="page-hero">
+            <div class="page-hero-bg"></div>
+            <div class="page-hero-content">
+                <p class="page-tag">
+                    <span class="tag-line"></span>
+                    Our Story
+                    <span class="tag-line"></span>
+                </p>
+                <h1>About This Project</h1>
+                <p class="page-subtitle">Honoring the Legacy of Cherubim &amp; Seraphim Ministers</p>
             </div>
+            <!-- Decorative cross -->
+            <div class="hero-cross-left"><i class="fas fa-cross"></i></div>
+            <div class="hero-cross-right"><i class="fas fa-cross"></i></div>
         </section>
-        <section class="intro">
+
+        <!-- ═══ BREADCRUMB ═══ -->
+        <div class="breadcrumb-bar">
             <div class="container">
-                <h2>History of the Cherubim & Seraphim Church</h2>
-                <p>The Cherubim & Seraphim (C&S) Church is a spiritual Christian movement founded in Nigeria in 1925. Known for its deep roots in prayer, worship, and prophetic ministry, the C&S Church has grown into a global fellowship, impacting millions through its message of holiness, peace, and service to God and humanity.</p>
-                <h2>Purpose of This Site</h2>
-                <p>This website is dedicated to preserving and sharing the biographies of ministers who have served faithfully in the C&S Church. By documenting their stories, we aim to inspire future generations, celebrate the legacy of faith, and provide a resource for the global C&S community and beyond.</p>
+                <nav class="breadcrumb" aria-label="breadcrumb">
+                    <a href="index.html"><i class="fas fa-home"></i> Home</a>
+                    <span class="bc-sep"><i class="fas fa-chevron-right"></i></span>
+                    <span class="bc-current">About</span>
+                </nav>
+            </div>
+        </div>
+
+        <!-- ═══ HISTORY SECTION ═══ -->
+        <section class="about-section">
+            <div class="container">
+                <div class="about-grid">
+
+                    <!-- Text -->
+                    <div class="about-text reveal">
+                        <p class="section-tag">Our Roots</p>
+                        <h2>History of the Cherubim &amp; Seraphim Church</h2>
+                        <p>The Cherubim &amp; Seraphim (C&amp;S) Church is a Pentecostal Christian organisation founded in Nigeria in 1925 by Saint Moses Orimolade Tunolase, an itinerant evangelist who believed in the efficacy of prayers and the power of healing in the name of our Lord Jesus Christ. His evangelical mission was characterised by a great revival — turning people away from idol worship to the worship of the true and living God. Orimolade's uncommon anointing of effective prayers earned him the sobriquet <em>"Baba Aladura"</em>.</p>
+                        <p>The story of Pentecostal revival changed with Orimolade's arrival in Lagos on 12th July 1924. Despite his physical limitations, he immediately swung into his divine mandate — preaching, healing the sick, casting out devils and demons, and destroying the works of masqueraders and occultists. His fame spread considerably when he healed Miss Christina Abiodun, who had fallen into a trance during the annual "Corpus Christi" celebration of the Roman Catholic Church on 18th June 1925.</p>
+                        <p>Following this event, the clergy of the local CMS Church prevailed on him to leave their premises. His exit drew a multitude of followers who continued with him in fellowship and evangelism. This fellowship grew in leaps and bounds into a movement — one that needed a name beyond the <em>"Aladura"</em> (prayer group) it was called. It is practically difficult to separate the history of the Cherubim and Seraphim Church from that of its founder, Saint Moses Orimolade Tunolase (Ajagunmokadi).</p>
+                        <div class="about-milestone">
+                            <div class="milestone">
+                                <span class="m-year">1924</span>
+                                <span class="m-desc">Orimolade Arrives in Lagos</span>
+                            </div>
+                            <div class="milestone">
+                                <span class="m-year">1925</span>
+                                <span class="m-desc">Church Founded in Nigeria</span>
+                            </div>
+                            <div class="milestone">
+                                <span class="m-year">1960s</span>
+                                <span class="m-desc">Expansion Across Africa</span>
+                            </div>
+                            <div class="milestone">
+                                <span class="m-year">Today</span>
+                                <span class="m-desc">Global Fellowship</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Decorative image card -->
+                    <div class="about-visual reveal">
+                        <div class="visual-card">
+                            <div class="visual-img" style="background-image: url('images/1.png');"></div>
+                            <div class="visual-badge">
+                                <i class="fas fa-cross"></i>
+                                <span>Est. 1925</span>
+                            </div>
+                        </div>
+                        <div class="visual-accent"></div>
+                    </div>
+
+                </div>
             </div>
         </section>
+
+        <!-- ═══ DIVIDER ═══ -->
+        <div class="gold-divider">
+            <div class="container">
+                <div class="divider-inner">
+                    <span></span>
+                    <i class="fas fa-cross"></i>
+                    <span></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- ═══ PURPOSE SECTION ═══ -->
+        <section class="purpose-section">
+            <div class="container">
+                <div class="about-grid reverse">
+
+                    <!-- Decorative panel -->
+                    <div class="purpose-cards reveal">
+                        <div class="p-card p-card-1">
+                            <i class="fas fa-book-open"></i>
+                            <h4>Preserve</h4>
+                            <p>Document and archive the stories of faithful ministers for generations to come.</p>
+                        </div>
+                        <div class="p-card p-card-2">
+                            <i class="fas fa-hands-praying"></i>
+                            <h4>Honour</h4>
+                            <p>Celebrate the lives and contributions of those who dedicated themselves to God's service.</p>
+                        </div>
+                        <div class="p-card p-card-3">
+                            <i class="fas fa-dove"></i>
+                            <h4>Inspire</h4>
+                            <p>Motivate future generations of ministers through the testimonies of those who came before.</p>
+                        </div>
+                    </div>
+
+                    <!-- Text -->
+                    <div class="about-text reveal">
+                        <p class="section-tag">Why We Exist</p>
+                        <h2>Purpose of This Site</h2>
+                        <p>This website is dedicated to preserving and sharing the biographies of ministers who have served faithfully in the C&amp;S Church. By documenting their stories, we aim to inspire future generations, celebrate the legacy of faith, and provide a resource for the global C&amp;S community and beyond.</p>
+                        <p>Every minister featured here represents decades of sacrifice, prayer, and unwavering commitment to the Gospel. Their stories deserve to be told, remembered, and passed on.</p>
+                        <a href="ministerspage/" class="btn-primary">
+                            Explore All Ministers <i class="fas fa-arrow-right"></i>
+                        </a>
+                    </div>
+
+                </div>
+            </div>
+        </section>
+
+        <!-- ═══ SCRIPTURE BANNER ═══ -->
+        <section class="scripture-banner">
+            <div class="container">
+                <div class="banner-inner">
+                    <div class="banner-cross"><i class="fas fa-cross"></i></div>
+                    <div class="banner-text">
+                        <p>"Not unto us, O Lord, not unto us, but unto thy name give glory."</p>
+                        <span>Psalm 115:1</span>
+                    </div>
+                    <div class="banner-cross"><i class="fas fa-cross"></i></div>
+                </div>
+            </div>
+        </section>
+
     </main>
 
+    <!-- ═══ FOOTER ═══ -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="ministers.html">All Ministers</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon">✦</span>
+                    <h2>C<span class="amp">&amp;</span>S Ministers</h2>
+                </div>
+                <p>Preserving the legacy of faith, service, and dedication within the Cherubim &amp; Seraphim Church.</p>
                 <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="footer-section">
-                <h3>Contact Information</h3>
-                <p>Email: info@csministers.org</p>
-                <p>Phone: (123) 456-7890</p>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="ministerspage/">All Ministers</a></li>
+                    <!-- <li><a href="contact.html">Contact</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-envelope"></i> csministers@gmail.com</p>
+                <p><i class="fas fa-phone"></i> +2348109972243</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 C&S Ministers Biography. All rights reserved.</p>
+            <p>&copy; 2024 C&amp;S Ministers Biography. All rights reserved.</p>
         </div>
     </footer>
+
     <script src="js/script.js"></script>
+    <script src="js/about.js"></script>
 </body>
-</html> 
+</html>

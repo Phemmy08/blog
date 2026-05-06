@@ -6,21 +6,24 @@
     <title>C&S Ministers Biography</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
 </head>
 <body>
+
+    <!-- ═══ NAVBAR ═══ -->
     <header>
-        <nav class="navbar">
+        <nav class="navbar" id="navbar">
             <div class="logo">
-                <h1>C&S Ministers</h1>
+                <span class="logo-icon">✦</span>
+                <h1>C<span class="amp">&amp;</span>S Ministers</h1>
             </div>
-            <div class="nav-links">
+            <div class="nav-links" id="navLinks">
                 <a href="index.html" class="active">Home</a>
                 <a href="about.html">About</a>
-                <a href="ministers.html">All Ministers</a>
-                <a href="contact.html">Contact</a>
+                <a href="ministerspage/">All Ministers</a>
+                <!-- <a href="contact.html">Contact</a> -->
             </div>
-            <div class="hamburger">
+            <div class="hamburger" id="hamburger" aria-label="Toggle menu">
                 <span></span>
                 <span></span>
                 <span></span>
@@ -29,114 +32,231 @@
     </header>
 
     <main>
+
+        <!-- ═══ HERO ═══ -->
         <section class="hero">
-            <div class="hero-content">
-                <h2>Cherubim & Seraphim Ministers</h2>
-                <p class="subtitle">Preserving the Legacy of Faith and Service</p>
-                <a href="#featured" class="cta-button">Meet Our Ministers</a>
+
+            <!-- Left: Text Content -->
+            <div class="hero-left">
+                <div class="hero-badge">
+                    <span class="badge-dot"></span>
+                    Cherubim &amp; Seraphim Church
+                </div>
+                <h2 class="hero-title">
+                    Ministers of<br>
+                    <em>Faith &amp;</em><br>
+                    Legacy
+                </h2>
+                <p class="hero-subtitle">
+                    Preserving the inspiring stories of dedicated men and women who have served the C&amp;S Church across generations.
+                </p>
+                <div class="hero-actions">
+                    <a href="ministerspage/" class="btn-primary">
+                        Meet Our Ministers
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="about.html" class="btn-ghost">Our Story</a>
+                </div>
+                <div class="hero-stats">
+                    <div class="stat">
+                        <span class="stat-num">50+</span>
+                        <span class="stat-label">Ministers</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">70+</span>
+                        <span class="stat-label">Years of Legacy</span>
+                    </div>
+                    <div class="stat-divider"></div>
+                    <div class="stat">
+                        <span class="stat-num">∞</span>
+                        <span class="stat-label">Lives Touched</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Right: Animated Collage -->
+            <div class="hero-right">
+                <div class="collage-grid">
+                    <div class="collage-cell cell-1" data-index="0"></div>
+                    <div class="collage-cell cell-2" data-index="1"></div>
+                    <div class="collage-cell cell-3" data-index="2"></div>
+                    <div class="collage-cell cell-4" data-index="3"></div>
+                    <div class="collage-cell cell-5" data-index="4"></div>
+                    <div class="collage-cell cell-6" data-index="5"></div>
+                    <div class="collage-cell cell-7" data-index="6"></div>
+                    <div class="collage-cell cell-8" data-index="7"></div>
+                    <div class="collage-cell cell-9" data-index="8"></div>
+                    <div class="collage-cell cell-10" data-index="9"></div>
+                    <div class="collage-cell cell-11" data-index="10"></div>
+                    <div class="collage-cell cell-12" data-index="11"></div>
+                    <div class="collage-cell cell-13" data-index="12"></div>
+                    <div class="collage-cell cell-14" data-index="13"></div>
+                </div>
+                <div class="collage-ring"></div>
+                <div class="collage-verse">
+                    <i class="fas fa-cross"></i>
+                    <span>Psalm 115:1</span>
+                </div>
+            </div>
+
+            <div class="scroll-hint">
+                <div class="scroll-line"></div>
+                <span>Scroll</span>
             </div>
         </section>
 
-        <section class="intro">
+        <!-- ═══ MISSION ═══ -->
+        <section class="mission">
             <div class="container">
-                <h2>Our Mission</h2>
-                <p>Welcome to the Cherubim & Seraphim Ministers Biography project. Our mission is to preserve and share the inspiring stories of dedicated ministers who have served in the C&S Church. Through these biographies, we honor their contributions, celebrate their achievements, and inspire future generations of ministers.</p>
+                <div class="mission-inner">
+                    <div class="mission-text">
+                        <p class="section-tag">Our Purpose</p>
+                        <h2>Honoring Those Who Served</h2>
+                        <p>Welcome to the Cherubim &amp; Seraphim Ministers Biography project. Our mission is to preserve and share the inspiring stories of dedicated ministers who have served in the C&amp;S Church. Through these biographies, we honor their contributions, celebrate their achievements, and inspire future generations of ministers.</p>
+                        <a href="about.html" class="link-underline">Learn more about us <i class="fas fa-arrow-right"></i></a>
+                    </div>
+                    <div class="mission-quote-block">
+                        <blockquote>
+                            <i class="fas fa-quote-left quote-icon"></i>
+                            <p>"Not unto us, O Lord, not unto us, but unto thy name give glory, for thy mercy, and for thy truth's sake."</p>
+                            <cite>— Psalm 115:1</cite>
+                        </blockquote>
+                    </div>
+                </div>
             </div>
         </section>
 
+        <!-- ═══ FEATURED MINISTERS ═══ -->
         <section id="featured" class="featured-ministers">
             <div class="container">
-                <h2>Featured Ministers</h2>
-                <div class="filter-buttons">
-                    <button onclick="filterMinisters('all')" class="active">All</button>
-                    <button onclick="filterMinisters('apostle')">Apostles</button>
-                    <button onclick="filterMinisters('prophet')">Prophets</button>
-                    <button onclick="filterMinisters('evangelist')">Evangelists</button>
+                <div class="section-header">
+                    <p class="section-tag">Spotlight</p>
+                    <h2>Featured Ministers</h2>
                 </div>
+
+                <div class="filter-buttons">
+                    <button onclick="filterMinisters('all')" class="active" data-filter="all">All</button>
+                    <button onclick="filterMinisters('apostle')" data-filter="apostle">Apostles</button>
+                    <button onclick="filterMinisters('prophet')" data-filter="prophet">Prophets</button>
+                    <button onclick="filterMinisters('evangelist')" data-filter="evangelist">Evangelists</button>
+                </div>
+
                 <div class="ministers-grid">
-                    <!-- Minister Card 1 -->
+
                     <article class="minister-card" data-title="apostle">
                         <div class="minister-image">
-                            <img src="images/pst-sam-makanju.jpg" alt="Apostle John Doe">
+                            <img src="images/pst-sam-makanju.jpg" alt="Pastor Sam Makanju">
+                            <div class="image-overlay">
+                                <a href="ministers/pastorsam/" class="overlay-link">View Profile</a>
+                            </div>
                         </div>
                         <div class="minister-info">
+                            <p class="minister-role">Pastor</p>
                             <h3>Pastor Sam Makanju</h3>
-                            <p class="title">Pastor</p>
-                            <p class="excerpt">Pastor Sam has been serving as the Senior Pastor at Dayspring Seraphic Church for over 4 years. Under his guidance, the church has expanded its outreach programs and established a strong community presence.</p>
-                            <a href="ministers/apostle-john-doe.html" class="read-more">Read More</a>
+                            <p class="excerpt">Senior Pastor at Dayspring Seraphic Church for over 4 years, expanding outreach programs and building a strong community presence.</p>
+                            <a href="ministers/pastorsam/" class="read-more">
+                                Read Biography <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
 
-                    <!-- Minister Card 2 -->
                     <article class="minister-card" data-title="prophet">
                         <div class="minister-image">
-                            <img src="images/placeholder.jpg" alt="Prophet Jane Smith">
+                            <img src="images/5.jpg" alt="Prophet Abraham Adebayo">
+                            <div class="image-overlay">
+                                <a href="ministers/prophet-jane-smith.html" class="overlay-link">View Profile</a>
+                            </div>
                         </div>
                         <div class="minister-info">
-                            <h3>Prophet Jane Smith</h3>
-                            <p class="title">Prophet</p>
-                            <p class="excerpt">Known for her prophetic ministry and dedication to youth development, inspiring generations through spiritual guidance.</p>
-                            <a href="ministers/prophet-jane-smith.html" class="read-more">Read More</a>
+                            <p class="minister-role">Prophet</p>
+                            <h3>Prophet Abraham Adebayo</h3>
+                            <p class="excerpt">Known for his prophetic ministry and dedication to youth development, inspiring generations through spiritual guidance.</p>
+                            <a href="ministers/prophet-jane-smith.html" class="read-more">
+                                Read Biography <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
 
-                    <!-- Minister Card 3 -->
-                    <article class="minister-card" data-title="evangelist">
+                    <article class="minister-card" data-title="Propeth">
                         <div class="minister-image">
-                            <img src="images/placeholder.jpg" alt="Evangelist Michael Brown">
+                            <img src="images/11 - Copy.jpg" alt="Prophet Cherub Obadare">
+                            <div class="image-overlay">
+                                <a href="ministers/Propeth-michael-brown.html" class="overlay-link">View Profile</a>
+                            </div>
                         </div>
                         <div class="minister-info">
-                            <h3>Evangelist Michael Brown</h3>
-                            <p class="title">Evangelist</p>
-                            <p class="excerpt">A passionate evangelist spreading the gospel through music and powerful preaching across multiple continents.</p>
-                            <a href="ministers/evangelist-michael-brown.html" class="read-more">Read More</a>
+                            <p class="minister-role">Propeth</p>
+                            <h3>Prophet Cherub Obadare</h3>
+                            <p class="excerpt">A passionate Propeth spreading the gospel through music and powerful preaching across multiple continents.</p>
+                            <a href="ministers/propeth-cherub/" class="read-more">
+                                Read Biography <i class="fas fa-arrow-right"></i>
+                            </a>
                         </div>
                     </article>
+
+                </div>
+
+                <div class="view-all-wrap">
+                    <a href="ministerspage/" class="btn-primary">
+                        View All Ministers <i class="fas fa-arrow-right"></i>
+                    </a>
                 </div>
             </div>
         </section>
 
-        <section class="scripture-quote">
+        <!-- ═══ SCRIPTURE BANNER ═══ -->
+        <section class="scripture-banner">
             <div class="container">
-                <blockquote>
-                    <p>"Not unto us, O Lord, not unto us, but unto thy name give glory, for thy mercy, and for thy truth's sake."</p>
-                    <cite>Psalm 115:1</cite>
-                </blockquote>
+                <div class="banner-inner">
+                    <div class="banner-cross"><i class="fas fa-cross"></i></div>
+                    <div class="banner-text">
+                        <p>"Not unto us, O Lord, not unto us, but unto thy name give glory."</p>
+                        <span>Psalm 115:1</span>
+                    </div>
+                    <div class="banner-cross"><i class="fas fa-cross"></i></div>
+                </div>
             </div>
         </section>
+
     </main>
 
+    <!-- ═══ FOOTER ═══ -->
     <footer>
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>Quick Links</h3>
-                <ul>
-                    <li><a href="index.html">Home</a></li>
-                    <li><a href="about.html">About</a></li>
-                    <li><a href="ministers.html">All Ministers</a></li>
-                    <li><a href="contact.html">Contact</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Connect With Us</h3>
+        <div class="footer-top">
+            <div class="footer-brand">
+                <div class="logo">
+                    <span class="logo-icon">✦</span>
+                    <h2>C<span class="amp">&amp;</span>S Ministers</h2>
+                </div>
+                <p>Preserving the legacy of faith, service, and dedication within the Cherubim &amp; Seraphim Church.</p>
                 <div class="social-icons">
-                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                    <a href="#" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
                     <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     <a href="#" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                 </div>
             </div>
-            <div class="footer-section">
-                <h3>Contact Information</h3>
-                <p>Email: info@csministers.org</p>
-                <p>Phone: (123) 456-7890</p>
+            <div class="footer-links">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="about.html">About</a></li>
+                    <li><a href="ministerspage/">All Ministers</a></li>
+                    <!-- <li><a href="contact.html">Contact</a></li> -->
+                </ul>
+            </div>
+            <div class="footer-contact">
+                <h4>Contact Us</h4>
+                <p><i class="fas fa-envelope"></i> csministers@gmail.com</p>
+                <p><i class="fas fa-phone"></i>+2348109972243</p>
             </div>
         </div>
         <div class="footer-bottom">
-            <p>&copy; 2024 C&S Ministers Biography. All rights reserved.</p>
+            <p>&copy; 2026 C&amp;S Ministers Biography. All rights reserved.</p>
         </div>
     </footer>
 
-    <script src="js/script.js"></script>
+    <script src="/js/script.js"></script>
 </body>
-</html> 
+</html>
